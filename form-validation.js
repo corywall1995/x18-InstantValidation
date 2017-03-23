@@ -101,6 +101,25 @@
 }
 */
 
+window.onload = main;
+
+function main() {
+  //Show message that there is an error with the username...
+  document.getElementById("usernameError").innerHTML="Username field cannot be left blank";
+  document.getElementById("usernameError").classList.remove("hidden-message");
+  document.getElementById("usernameError").classList.add("shown-message");
+  //Turn the username items red
+  document.getElementById("usernameGroup").classList.add("has-error");
+
+  //Show message that there is an error with the password...
+  document.getElementById("passwordError").innerHTML="Password field cannot be left blank";
+  document.getElementById("passwordError").classList.remove("hidden-message");
+  document.getElementById("passwordError").classList.add("shown-message");
+  //Turn the password items red
+  document.getElementById("passwordGroup").classList.add("has-error");
+
+}
+
 function validateUsername() {
   var userEntered = document.getElementById("user").value;
   var userSpace = userEntered.search(" ");
